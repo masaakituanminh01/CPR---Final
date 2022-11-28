@@ -40,8 +40,8 @@ def set_confirm():
     email = data.get('email')
     info = gv()
     try:
-        send_mail(from_gmail_account='attt92bookstore@gmail.com',
-                  from_gmail_password='@TTT92bookstore',
+        send_mail(from_gmail_account='dream.bookstore.main@gmail.com',
+                  from_gmail_password='Bookstore???2001',
                   to_mail_account=email,
                   message=info['message'])
     except:

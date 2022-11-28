@@ -87,7 +87,7 @@ def update_ship_info():
         customer_address=customer_address,
         customer_note=customer_note,
         cart_otp=cart_otp)
-    message = 'Mã OTP đơn hàng của bạn là: ' + cart_otp
+    message = 'Please do not share this OTP to anyone. Your OTP is: ' + cart_otp
     send_message_phone_number(message=message)
     return jsonify({
         'cart_otp': cart_otp
