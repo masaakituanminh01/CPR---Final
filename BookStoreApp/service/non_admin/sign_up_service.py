@@ -24,8 +24,8 @@ def get_null_in_data(data):
 def get_verification():
     r = randint(100000, 999999)
     message = str.format(
-        f'MÃ XÁC NHẬN\n\n{r} là mã xác nhận BookStore của bạn. '
-        f'\nVui lòng không cung cấp mật mã này cho bất kì ai trong bất kì trường hợp nào. \nXin cảm ơn!')
+        f'CODE {r} IS YOUR DREAM BOOKSTORE VERIFICATION CODE. '
+        f'\nPlease do not send this code to anyone in any circumstances \nThank you very much!')
     return {
         'number': r,
         'message': message

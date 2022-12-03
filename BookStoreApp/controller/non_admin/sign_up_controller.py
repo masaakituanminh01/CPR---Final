@@ -41,9 +41,10 @@ def set_confirm():
     info = gv()
     try:
         send_mail(from_gmail_account='dream.bookstore.main@gmail.com',
-                  from_gmail_password='Bookstore???2001',
+                  from_gmail_password='qezdqucuugmlnlkr',
                   to_mail_account=email,
                   message=info['message'])
+
     except:
         return jsonify('error')
 
