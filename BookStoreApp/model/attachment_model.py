@@ -18,4 +18,4 @@ class AttachmentModel(db.Model):
 
     # Quan hệ
     books = relationship('BookModel', backref='attachment', lazy=True,
-                         foreign_keys='[BookModel.attachment_id]')
+                         foreign_keys='[BookModel.attachment_id]') 
