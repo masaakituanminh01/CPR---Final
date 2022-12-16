@@ -7,8 +7,8 @@ from sqlalchemy.orm import relationship
 from BookStoreApp import db
 
 
-# Lớp này tượng trưng cho bảng book_model dưới database
-# Dùng để lưu thông tin của sách
+# This object for the book_model table under database
+# Use for save book's information
 class BookModel(db.Model):
     __tablename__ = 'book_model'
     __table_args__ = {'keep_existing': True}

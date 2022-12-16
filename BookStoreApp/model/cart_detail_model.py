@@ -1,11 +1,6 @@
 import datetime
-
 from sqlalchemy import Column, Integer, ForeignKey, DateTime
-
 from BookStoreApp import db
-
-# Biến này tượng trưng cho bảng cart_detail_model dưới database
-# chứa các thông tin chi tiết của giỏ hàng
 cart_detail_model = db.Table('cart_detail_model',
                              Column('cart_id', Integer,
                                     ForeignKey('cart_model.cart_id'), primary_key=True),
