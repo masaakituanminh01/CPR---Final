@@ -12,8 +12,8 @@
     <div class="panel-header bg-primary-gradient">
         <div class="page-inner py-5">
             <div>
-                <h2 class="text-white pb-2 fw-bold">Giỏ hàng</h2>
-                <h5 class="text-white op-7 mb-2">Quản lý Nhà sách</h5>
+                <h2 class="text-white pb-2 fw-bold">Order</h2>
+                <h5 class="text-white op-7 mb-2">Bookstore Management</h5>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="card-head-row">
-                            <div class="card-title">Lựa chọn tuỳ chỉnh giỏ hàng</div>
+                            <div class="card-title">Bookstore options managements</div>
                         </div>
                     </div>
                     <div class="card-body">
@@ -33,28 +33,27 @@
                                     <div class="custom-control custom-radio">
                                         <input type="radio" id="input-asc" name="gender" class="custom-control-input"
                                             checked="">
-                                        <label class="custom-control-label" for="input-asc">Sắp xếp tăng dần</label>
+                                        <label class="custom-control-label" for="input-asc">Sort ascending</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="custom-control custom-radio">
                                         <input type="radio" id="input-desc" name="gender" class="custom-control-input"
                                             checked="">
-                                        <label class="custom-control-label" for="input-desc">Sắp xếp giảm dần</label>
+                                        <label class="custom-control-label" for="input-desc">Sort up descending</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="selectPrice">Tìm kiếm theo giá</label>
+                                    <label for="selectPrice">Search by price</label>
                                     <select name="selectPrice" id="selectPrice">
-                                        <option value="select-all">--- Tất cả ---</option>
-                                        <option value="select-1">Dưới 1 triệu</option>
-                                        <option value="select-2">Từ 1 - 2 triệu</option>
-                                        <option value="select-3">Trên 2 triệu</option>
+                                        <option value="select-all">--- All ---</option>
+                                        <option value="select-1">Under 1.000.000 dong</option>
+                                        <option value="select-2">Between 1.000.000 - 2.000.000 dong</option>
+                                        <option value="select-3">Above 2.000.000 dong</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-secondary my-2 my-sm-0 ml-2" onclick="getCartData()">Tìm
-                                        kiếm</button>
+                                    <button type="button" class="btn btn-secondary my-2 my-sm-0 ml-2" onclick="getCartData()">Search</button>
                                 </div>
                             </form>
                         </div>

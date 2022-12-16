@@ -12,7 +12,7 @@
                         <div class="cart-empty-content w-100 text-center justify-content-center">
                             <img src="https://res.cloudinary.com/attt92bookstore/image/upload/v1647679833/icon%20-%20payment%20-%20banner/shopping-cart-not-product_pwdt7a.png"
                                 alt="shopping-cart-not-product">
-                            <p>Bạn phải đăng nhập để thông tin giỏ hàng</p>
+                            <p>You have to login to see cart information</p>
                         </div>
                         {% endif %}
                     </div>
@@ -29,7 +29,7 @@
                                     <a data-toggle="collapse" data-parent="#cart-steps-accordion" href="#step1contentid"
                                         aria-expanded="true" aria-controls="step1contentid"
                                         class="text-uppercase header"><span class="steps">1</span>
-                                        <span class="label ">KHÁCH HÀNG MỚI / ĐĂNG NHẬP</span>
+                                        <span class="label ">NEW USER / LOGIN</span>
                                         <i class="fa fa-chevron-right"></i>
                                     </a>
                                 </h5>
@@ -65,7 +65,7 @@
                                         aria-expanded="true" aria-controls="step2contentid"
                                         class="text-uppercase header">
                                         <span class="steps">1</span>
-                                        <span class="label">Địa chỉ giao hàng</span>
+                                        <span class="label">Address</span>
                                         <i class="fa fa-chevron-right"></i>
                                     </a>
                                 </h5>
@@ -76,35 +76,30 @@
                                     <form class="form-diachigiaohang">
                                         <div class="form-label-group">
                                             <input type="text" id="nameShip" class="form-control"
-                                                placeholder="Nhập họ và tên (*)" name="name" required autofocus>
+                                                placeholder="Name (*)" name="name" required autofocus>
                                         </div>
                                         <div class="form-label-group">
                                             <input type="text" id="phoneNumberShip" class="form-control"
-                                                placeholder="Nhập số điện thoại (*)" name="phone" required>
+                                                placeholder="Phone number (*)" name="phone" required>
                                         </div>
                                         <div class="form-label-group">
                                             <input type="text" id="addressShip" class="form-control"
-                                                placeholder="Nhập Địa chỉ giao hàng (*)" name="address" required>
+                                                placeholder="Address (*)" name="address" required>
                                         </div>
                                         <div class="form-label-group">
                                             <textarea id="noteShip" class="form-control"
-                                                placeholder="Nhập ghi chú (Nếu có)" name="note"></textarea>
+                                                placeholder="Note" name="note"></textarea>
                                         </div>
                                     </form>
                                     {% if current_user.role_id!=1%}
                                     <button class="btn btn-lg btn-block btn-checkout text-uppercase text-white"
                                         style="background: #F5A623" id="buyButton">
-                                        <img src="https://res.cloudinary.com/attt92bookstore/image/upload/v1648461706/icon%20-%20payment%20-%20banner/momo_uz0oxj.png"
-                                            alt="momo payment img" style="
-                                        width: 30%;
-                                        height: auto;">
-                                        Thanh toán Momo</button>
+                                        Order</button>
                                     {% else %}
                                     <button class="btn btn-secondary btn-block btn-checkout text-uppercase
-                                            text-white" id="customerBuyButton">Thanh toán Momo</button>
+                                            text-white" id="customerBuyButton">Pay</button>
                                     {% endif %}
-                                    <p class="text-center note-before-checkout">(Vui lòng kiểm tra lại đơn hàng
-                                        trước khi Đặt mua)</p>
+                                    <p class="text-center note-before-checkout">(Please check your product before order)</p>
                                 </div>
                             </div>
                         </div>
@@ -123,8 +118,8 @@
 <div class="modal fade" id="otpModal" tabindex="-1" role="dialog" aria-labelledby="otpModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document" style="margin:1.75rem auto;">
         <div class="swal2-popup" style="display: grid; pointer-events: fill;">
-            <h2 class="swal2-title" id="exampleModalLabel" style="display: block;">Mã xác nhận OTP</h2>
-            <label for="swal2-input" class="swal2-input-label">Nhập mã xác nhận OTP vào bên dưới</label>
+            <h2 class="swal2-title" id="exampleModalLabel" style="display: block;">OTP</h2>
+            <label for="swal2-input" class="swal2-input-label">Insert OTP</label>
             <button type="button" class="close position-absolute" style="top: 10px; right:15px;" data-dismiss="modal"
                 aria-label="Close">
                 <span aria-hidden="true">&times;</span>

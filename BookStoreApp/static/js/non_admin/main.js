@@ -402,8 +402,8 @@ $('.show-password').on('click', function () {
 })
 $('#bookSearchBtn').on('click', function () {
     Swal.fire({
-        title: 'Chức năng đang hoàn thiện !',
-        text: 'Vui lòng quay lại sau',
+        title: 'Feature is under maintenance !',
+        text: 'Please try again later',
         icon: 'warning',
         confirmButtonColor: '#3085d6',
         confirmButtonText: 'Ok',

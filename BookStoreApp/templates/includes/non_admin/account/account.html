@@ -6,9 +6,9 @@
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <a class="nav-item nav-link active" id="account-navtab" data-toggle="tab" href="#account-nav"
-                            role="tab" aria-controls="nav-home" aria-selected="true">Thông tin tài khoản</a>
+                            role="tab" aria-controls="nav-home" aria-selected="true">Account information</a>
                         <a class="nav-item nav-link" id="order-tab" data-toggle="tab" href="#order-nav" role="tab"
-                            aria-controls="nav-profile" aria-selected="false">Danh sách đơn hàng</a>
+                            aria-controls="nav-profile" aria-selected="false">Order list</a>
                     </div>
                 </nav>
 
@@ -19,32 +19,31 @@
                     <div class="tab-pane fade show active pl-4 " id="account-nav" role="tabpanel"
                         aria-labelledby="account-navtab">
                         <div class="offset-md-4 mt-3" id="accountInfoClient">
-                            <h3 class="account-header">Thông tin tài khoản</h3>
+                            <h3 class="account-header">Account information</h3>
                         </div>
                         <div class="checkbox-change-pass my-3">
                             <div class="row">
                                 <input type="checkbox" name="changepass" id="changepass" class="offset-md-4"
                                     style="margin-top: 6px;margin-right: 5px; ">
-                                <label for="changepass">Thay đổi mật khẩu</label>
+                                <label for="changepass">Change password</label>
                             </div>
                         </div>
                         <div class="thay-doi-mk">
                             <div class="mkcu my-3">
                                 <div class="row">
-                                    <label class="col-md-2 offset-md-2" for="account-mkcu">Mật khẩu cũ</label>
+                                    <label class="col-md-2 offset-md-2" for="account-mkcu">Old password</label>
                                     <input id="accountOldPassword" class="col-md-4" type="password" name="account-mkcu">
                                 </div>
                             </div>
                             <div class="mkmoi my-3">
                                 <div class="row">
-                                    <label class="col-md-2 offset-md-2" for="account-mkmoi">Mật khẩu mới</label>
+                                    <label class="col-md-2 offset-md-2" for="account-mkmoi">New password</label>
                                     <input id="accountNewPassword1" class="col-md-4" type="password" name="account-mkmoi">
                                 </div>
                             </div>
                             <div class="xacnhan-mkmoi my-3">
                                 <div class="row">
-                                    <label class="col-md-2 offset-md-2" for="account-xacnhan-mkmoi">Xác nhận mật
-                                        khẩu</label>
+                                    <label class="col-md-2 offset-md-2" for="account-xacnhan-mkmoi">Confirm password</label>
                                     <input id="accountNewPassword2" class="col-md-4" type="password" name="account-xacnhan-mkmoi">
                                 </div>
                             </div>
@@ -63,11 +62,11 @@
                         <div id="accountCD" class="order-table">
                             <table id="cartDetailAccount" class="m-auto">
                                 <tr>
-                                    <th class='text-center'>Mã đơn hàng</th>
-                                    <th class='text-center'>Ngày mua</th>
-                                    <th class='text-center'>Sản phẩm</th>
-                                    <th class='text-center'>Tổng tiền</th>
-                                    <th class='text-center'>Trạng thái đơn hàng</th>
+                                    <th class='text-center'>Order ID</th>
+                                    <th class='text-center'>Order date</th>
+                                    <th class='text-center'>Product</th>
+                                    <th class='text-center'>Total</th>
+                                    <th class='text-center'>Order status</th>
                                 </tr>
                             </table>
                         </div>

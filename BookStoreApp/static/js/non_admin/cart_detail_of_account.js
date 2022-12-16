@@ -13,8 +13,8 @@ $('#accountCD').ready(function () {
             setCartDetail(data)
          else {
             Swal.fire({
-                        title: 'Hệ thống đang bảo trì !',
-                        text: 'Vui lòng quay lại sau',
+                        title: 'System is under maintenance !',
+                        text: 'Please try again later',
                         icon: 'warning',
                         confirmButtonColor: '#3085d6',
                         confirmButtonText: 'Ok',

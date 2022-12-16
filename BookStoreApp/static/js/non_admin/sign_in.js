@@ -15,8 +15,8 @@ $('#btnSignIn').click(function () {
         }).then(res => res.json()).then(data => {
             if (data == 'error') {
                 Swal.fire({
-                    title: 'Tên đăng nhập hoặc mật khẩu sai !',
-                    text: 'Xin vui lòng kiểm tra lại',
+                    title: 'Wrong username or password !',
+                    text: 'Please try again',
                     icon: 'warning',
                     confirmButtonColor: '#3085d6',
                     confirmButtonText: 'Ok',
@@ -33,7 +33,7 @@ $('#btnSignIn').click(function () {
 function isExactlyDataSignIn() {
     if (document.getElementById('usernameSignIn').value == '' || document.getElementById('passwordSignIn').value == '') {
         Swal.fire({
-            title: 'Vui lòng kiểm tra lại !!!',
+            title: 'Please try again !!!',
             text: '',
             icon: 'warning',
             confirmButtonColor: '#3085d6',

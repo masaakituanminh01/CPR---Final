@@ -3,11 +3,11 @@
         <div class="page-inner py-5">
             <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
                 <div>
-                    <h2 class="text-white pb-2 fw-bold">Trang tổng quan</h2>
+                    <h2 class="text-white pb-2 fw-bold">Dashboard</h2>
                 </div>
                 <div class="ml-md-auto py-2 py-md-0">
-                    <a href="/admin/bookmodel" class="btn btn-white btn-border btn-round mr-2">Quản lý sách</a>
-                    <a href="/admin/customermodel" class="btn btn-secondary btn-round">Quản lý khách hàng</a>
+                    <a href="/admin/bookmodel" class="btn btn-white btn-border btn-round mr-2">Book Management</a>
+                    <a href="/admin/customermodel" class="btn btn-secondary btn-round">User Management</a>
                 </div>
             </div>
         </div>
@@ -17,14 +17,14 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">Thống kê tổng quan</div>
+                        <div class="card-title">Overrall statistical</div>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group-default">
                                     <div class="pt-2 pb-2">
-                                        <span class="text-success fw-bold">Số sách:</span>
+                                        <span class="text-success fw-bold">Number of books:</span>
                                         <span id="bookAmount"></span>
                                     </div>
                                 </div>
@@ -32,7 +32,7 @@
                             <div class="col-md-6">
                                 <div class="form-group-default">
                                     <div class="pt-2 pb-2">
-                                        <span class="text-success fw-bold">Số khách hàng:</span>
+                                        <span class="text-success fw-bold">Number of users:</span>
                                         <span id="customerAmount"></span>
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@
                             <div class="col-md-6">
                                 <div class="form-group-default">
                                     <div class="pt-2 pb-2">
-                                        <span class="text-success fw-bold">Số loại sách:</span>
+                                        <span class="text-success fw-bold">Number of categories:</span>
                                         <span id="categoryAmount"></span>
                                     </div>
                                 </div>
@@ -48,7 +48,7 @@
                             <div class="col-md-6">
                                 <div class="form-group-default">
                                     <div class="pt-2 pb-2">
-                                        <span class="text-success fw-bold">Số nhà xuất bản:</span>
+                                        <span class="text-success fw-bold">Number of manufacturer:</span>
                                         <span id="manufacturerAmount"></span>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                             <div class="col-md-6">
                                 <div class="form-group-default">
                                     <div class="pt-2 pb-2">
-                                        <span class="text-success fw-bold">Số đơn hàng đã thanh toán</span>
+                                        <span class="text-success fw-bold">Number of orders</span>
                                         <span id="cartAmount"></span>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@
                             <div class="col-md-6">
                                 <div class="form-group-default">
                                     <div class="pt-2 pb-2">
-                                        <span class="text-success fw-bold">Số lượng đánh giá khách hàng</span>
+                                        <span class="text-success fw-bold">Number of review</span>
                                         <span id="commentAmount"></span>
                                     </div>
                                 </div>
@@ -102,17 +102,17 @@
             <div class="col-md-6">
                 <div class="card full-height">
                     <div class="card-header">
-                        <div class="card-title">Tổng doanh thu</div>
+                        <div class="card-title">Total statistical</div>
                     </div>
                     <div class="card-body">
                         <div class="row py-3">
                             <div class="col-md-4 d-flex flex-column justify-content-around">
                                 <div>
-                                    <span class="fw-bold text-success op-8">Doanh thu hôm nay</span>
+                                    <span class="fw-bold text-success op-8">Today statistical</span>
                                     <p class="fw-bold" id="todayRevenue"></p>
                                 </div>
                                 <div>
-                                    <span class="fw-bold text-danger op-8">Doanh thu hôm qua</span>
+                                    <span class="fw-bold text-danger op-8">Yesterday statistical</span>
                                     <p class="fw-bold" id="yesterdayRevenue"></p>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@
                     <div class="card-header">
                         <div class="card-head-row">
                             <div class="card-title">
-                                Thống kê số lượng đơn hàng trong tháng <span id="month"></span>/<span id=year></span>
+                                Statistics of the number of orders in the month <span id="month"></span>/<span id=year></span>
                             </div>
                         </div>
                     </div>
@@ -148,7 +148,7 @@
         <div class="row">
             <div class="card col-12">
                 <div class="card-header">
-                    <div class="card-title">Danh sách top 15 sách chạy nhất</div>
+                    <div class="card-title">Top 15 best-selling books</div>
                 </div>
                 <div class="row card-body">
                     <div class="col-md-5">

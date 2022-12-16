@@ -17,8 +17,8 @@ function getAccountInfo() {
             setAccountInfoData(data[0])
          else {
             Swal.fire({
-                        title: 'Hệ thống đang bảo trì !',
-                        text: 'Vui lòng quay lại sau',
+                        title: 'System is under maintenance !',
+                        text: 'Please try again later',
                         icon: 'warning',
                         confirmButtonColor: '#3085d6',
                         confirmButtonText: 'Ok',
@@ -32,21 +32,21 @@ function setAccountInfoData(data){
     setData(data)
     var info = `<div class="my-3">
                     <div class="row">
-                        <label class="col-md-2 offset-md-2" for="account-username">Tên tài khoản</label>
+                        <label class="col-md-2 offset-md-2" for="account-username">Username</label>
                         <input class="col-md-5" type="text" name="account-username" disabled="disabled"
                         value="${data['username']}">
                     </div>
                 </div>
                 <div class="my-3">
                     <div class="row">
-                        <label class="col-md-2 offset-md-2" for="account-name">Họ tên</label>
+                        <label class="col-md-2 offset-md-2" for="account-name">Name</label>
                         <input class="col-md-5" type="text" name="account-name" disabled="disabled"
                         value="${data['name']}">
                     </div>
                 </div>
                 <div class="my-3">
                     <div class="row">
-                        <label class="col-md-2 offset-md-2" for="account-role">Đối tượng</label>
+                        <label class="col-md-2 offset-md-2" for="account-role">Role</label>
                         <input class="col-md-5" type="text" name="account-role" disabled="disabled"
                         value="${data['role']}">
                     </div>
@@ -60,35 +60,35 @@ function setAccountInfoData(data){
                 </div>
                 <div class="my-3">
                     <div class="row">
-                        <label class="col-md-2 offset-md-2" for="account-phone">Số điện thoại</label>
+                        <label class="col-md-2 offset-md-2" for="account-phone">Phone number</label>
                         <input class="col-md-5" type="text" name="account-phone" disabled="disabled"
                         value="${data['phone_number']}">
                     </div>
                 </div>
                 <div class="my-3">
                     <div class="row">
-                        <label class="col-md-2 offset-md-2" for="account-address">Địa chỉ</label>
+                        <label class="col-md-2 offset-md-2" for="account-address">Address</label>
                         <input class="col-md-5" type="text" name="account-address" disabled="disabled"
                         value="${data['address']}">
                     </div>
                 </div>
                 <div class="my-3">
                     <div class="row">
-                        <label class="col-md-2 offset-md-2" for="account-joined-date">Ngày tạo</label>
+                        <label class="col-md-2 offset-md-2" for="account-joined-date">Joined date</label>
                         <input class="col-md-5" type="text" name="account-joined-date" disabled="disabled"
                         value="${data['joined_date']}">
                     </div>
                 </div>
                 <div class="my-3">
                     <div class="row">
-                        <label class="col-md-2 offset-md-2" for="account-bd">Ngày sinh</label>
+                        <label class="col-md-2 offset-md-2" for="account-bd">Date of birth</label>
                         <input class="col-md-5" type="text" name="account-bd" disabled="disabled"
                         value="${data['date_of_birth']}">
                     </div>
                 </div>
                 <div class="my-3">
                     <div class="row">
-                        <label class="col-md-2 offset-md-2" for="account-point">Điểm tích lũy</label>
+                        <label class="col-md-2 offset-md-2" for="account-point">Point</label>
                         <input class="col-md-5" type="text" name="account-point" disabled="disabled"
                         value="${data['accumulated_point']}">
                     </div>
@@ -99,7 +99,7 @@ function setAccountInfoData(data){
 function setData(data){
     for(let i in data){
         if (data[i] == '')
-            data[i] = 'Thông tin chưa cập nhật'
+            data[i] = 'Information has not been updated'
     }
 }
 
@@ -119,8 +119,8 @@ function setChangePassword(){
             }).then(res => res.json()).then(data => {
                  if(data == 'wrong_password'){
                     Swal.fire({
-                            title: 'Mật khẩu cũ sai !!!',
-                            text: 'Vui lòng kiểm tra lại',
+                            title: 'Wrong old password !!!',
+                            text: 'Please check again',
                             icon: 'warning',
                             confirmButtonColor: '#3085d6',
                             confirmButtonText: 'Ok',
@@ -128,7 +128,7 @@ function setChangePassword(){
                  }
                  else if(data == 'successful'){
                             Swal.fire(
-                                'Đổi mật khẩu thành công',
+                                'Password changed successfully',
                                 '',
                                 'success'
                             )
@@ -136,8 +136,8 @@ function setChangePassword(){
                         }
                         else {
                             Swal.fire({
-                                        title: 'Hệ thống đang bảo trì !',
-                                        text: 'Vui lòng quay lại sau',
+                                        title: 'System is under maintenance !',
+                                        text: 'Please try again later',
                                         icon: 'warning',
                                         confirmButtonColor: '#3085d6',
                                         confirmButtonText: 'Ok',
@@ -156,8 +156,8 @@ function isChangePassData(){
 
     if (oldPass.length < 6 || newPass1.length < 6 || newPass2.length < 6){
         Swal.fire({
-                        title: 'Độ dài mật khẩu phải ít nhất 6 kí tự !',
-                        text: 'Vui lòng kiểm tra lại',
+                        title: 'Password length must be at least 6 characters !',
+                        text: 'Please try again',
                         icon: 'warning',
                         confirmButtonColor: '#3085d6',
                         confirmButtonText: 'Ok',
@@ -166,8 +166,8 @@ function isChangePassData(){
     }
     else if (newPass1 != newPass2){
             Swal.fire({
-                        title: 'Mật khẩu mới không trùng !',
-                        text: 'Vui lòng kiểm tra lại',
+                        title: 'New password does not match !',
+                        text: 'Please try again',
                         icon: 'warning',
                         confirmButtonColor: '#3085d6',
                         confirmButtonText: 'Ok',
@@ -176,8 +176,8 @@ function isChangePassData(){
           }
           else if(oldPass ==newPass1){
                 Swal.fire({
-                        title: 'Mật khẩu mới trùng với mật khẩu cũ !',
-                        text: 'Vui lòng kiểm tra lại',
+                        title: 'New password does not match with the old !',
+                        text: 'Please try again',
                         icon: 'warning',
                         confirmButtonColor: '#3085d6',
                         confirmButtonText: 'Ok',

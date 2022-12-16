@@ -41,7 +41,7 @@ function getMoneyTotalInCart() {
 function setCartDetail(books) {
     $('#bookList').html('')
     htmlData = `
-        <h6 class="cart-header font-weight-bold">GIỎ HÀNG CỦA BẠN <span>(${books.length} sản phẩm)</span></h6>
+        <h6 class="cart-header font-weight-bold">YOUR CART <span>(${books.length} product)</span></h6>
         <div class="cart-list-items mt-3">
     `
     for (let i = 0; i < books.length; i++)
@@ -88,24 +88,24 @@ function setMoneyTotal(moneyTotal) {
     htmlData = `
         <div class="row">
             <div class="col-md-3">
-                <a href="/" class="btn buy-more">Mua thêm</a>
+                <a href="/" class="btn buy-more">Buy more</a>
             </div>
             <div class="col-md-5 offset-md-4">
                 <div class="total-price">
                     <div class="group d-flex justify-content-between">
-                        <p class="label">Tạm tính:</p>
+                        <p class="label">Temporary calculation:</p>
                         <p class="tamtinh">${moneyTotal['cost_total']} ₫</p>
                     </div>
                     <div class="group d-flex justify-content-between">
-                        <p class="label">Giảm giá:</p>
+                        <p class="label">Discount:</p>
                         <p class="giamgia">${moneyTotal['saving_total']} ₫</p>
                     </div>
                     <div class="group d-flex justify-content-between align-items-center">
-                        <strong class="text-uppercase">Tổng cộng:</strong>
+                        <strong class="text-uppercase">Total:</strong>
                         <p class="total">${moneyTotal['sale_price_total']} ₫</p>
                     </div>
                     <small class="note d-flex justify-content-end text-muted">
-                        (Giá đã bao gồm VAT)
+                        (VAT included)
                     </small>
                 </div>
             </div>
@@ -134,8 +134,8 @@ function addBook(bookId) {
             getCartDetailAmount()
         } else
             Swal.fire({
-                title: 'Thêm thất bại',
-                text: 'Xin vui lòng kiểm tra lại',
+                title: 'Added fail',
+                text: 'Please try again',
                 icon: 'warning',
                 confirmButtonColor: '#3085d6',
                 confirmButtonText: 'Ok',
@@ -166,8 +166,8 @@ function subtractBook(bookId) {
             getCartDetailAmount()
         } else
             Swal.fire({
-                title: 'Giảm thất bại',
-                text: 'Xin vui lòng kiểm tra lại',
+                title: 'Action fail!',
+                text: 'Please try again',
                 icon: 'warning',
                 confirmButtonColor: '#3085d6',
                 confirmButtonText: 'Ok',
@@ -178,14 +178,14 @@ function subtractBook(bookId) {
 // Xóa sách khỏi đơn hàng
 function deleteBook(bookId) {
     Swal.fire({
-        title: 'Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng?',
-        text: 'Mọi thao tác sau khi thực hiện không thể phục hồi lại',
+        title: 'Are you sure you want to remove this product?',
+        text: 'You cannot undo after this action',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Xác nhận',
-        cancelButtonText: 'Huỷ bỏ'
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel'
     }).then((result) => {
         if (result.isConfirmed) {
             fetch('/gio-hang/api/delete-to-cart', {
@@ -199,8 +199,8 @@ function deleteBook(bookId) {
             }).then(res => res.json()).then(result => {
                 if (result['result']) {
                     Swal.fire(
-                        'Xóa thành công',
-                        'Giỏ hàng của bạn đã được cập nhật.',
+                        'Deleted successfully',
+                        'Your cart has been updated.',
                         'success'
                     ).then(function () {
                         getBookInCart()
@@ -209,8 +209,8 @@ function deleteBook(bookId) {
 
                 } else
                     Swal.fire({
-                        title: 'Xóa thất bại',
-                        text: 'Xin vui lòng kiểm tra lại',
+                        title: 'Deleted fail!',
+                        text: 'Please try again',
                         icon: 'warning',
                         confirmButtonColor: '#3085d6',
                         confirmButtonText: 'Ok',
@@ -260,8 +260,8 @@ function setShipInfo() {
 function checkCartInformation() {
     if (parseInt($('#cartDetailAmount').text()) <= 0) {
         Swal.fire({
-            title: 'Giỏ hàng không được trống',
-            text: 'Xin vui lòng kiểm tra lại',
+            title: 'Your cart cannot be empty!',
+            text: 'Please try again',
             icon: 'warning',
             confirmButtonColor: '#3085d6',
             confirmButtonText: 'Ok',
@@ -272,8 +272,8 @@ function checkCartInformation() {
         $('#phoneNumberShip').val().length <= 0 ||
         $('#addressShip').val().length <= 0) {
         Swal.fire({
-            title: 'Thông tin đặt hàng chưa đầy đủ hoặc chưa hợp lệ',
-            text: 'Xin vui lòng kiểm tra lại',
+            title: 'Your information is not fulfilled or invalid',
+            text: 'Please try again',
             icon: 'warning',
             confirmButtonColor: '#3085d6',
             confirmButtonText: 'Ok',
@@ -286,14 +286,14 @@ function checkCartInformation() {
 // Xác nhận đặt hàng
 function confirmOrder() {
     Swal.fire({
-        title: 'Bạn xác nhận muốn thanh toán đơn hàng này',
-        text: 'Mọi thao tác sau khi thực hiện không thể phục hồi lại',
+        title: 'Are you sure you want to purchase this order?',
+        text: 'Your action cannot be undone',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Xác nhận',
-        cancelButtonText: 'Huỷ bỏ'
+        confirmButtonText: 'Confirm',
+        cancelButtonText: 'Cancel'
     }).then((result) => {
         if (result.isConfirmed && checkCartInformation()) {
             setShipInfo()
@@ -322,7 +322,7 @@ function checkPaymentResult() {
 
         if (parseInt(resultCode) == 1004) {
             Swal.fire({
-                title: 'Đặt hàng thất bại do số tiền thanh toán vượt quá hạn mức thanh toán của bạn',
+                title: 'Order failed due to payment amount exceeding your payment limit',
                 icon: 'warning',
                 confirmButtonColor: '#3085d6',
                 confirmButtonText: 'Ok',
@@ -332,7 +332,7 @@ function checkPaymentResult() {
             })
         } else if (parseInt(resultCode) == 1005) {
             Swal.fire({
-                title: 'Đặt hàng thất bại do url hoặc QR code đã hết hạn',
+                title: 'Order failed due to expired URL or QR code',
                 icon: 'warning',
                 confirmButtonColor: '#3085d6',
                 confirmButtonText: 'Ok',
@@ -342,8 +342,8 @@ function checkPaymentResult() {
             })
         } else if (parseInt(resultCode) == 1006) {
             Swal.fire({
-                title: 'Đặt hàng thất bại do bạn đã huỷ giao dịch',
-                text: 'Vui lòng thử lại sau',
+                title: 'Order failed because you canceled the transaction',
+                text: 'Please try again',
                 icon: 'warning',
                 confirmButtonColor: '#3085d6',
                 confirmButtonText: 'Ok',
@@ -353,7 +353,7 @@ function checkPaymentResult() {
             })
         } else if (parseInt(resultCode) != 0) {
             Swal.fire({
-                title: 'Đặt hàng thất bại do lỗi hệ thống',
+                title: 'Order failed due to system error',
                 icon: 'warning',
                 confirmButtonColor: '#3085d6',
                 confirmButtonText: 'Ok',
@@ -363,7 +363,7 @@ function checkPaymentResult() {
             })
         } else {
             Swal.fire({
-                title: 'Đặt hàng thành công !',
+                title: 'Order successfully !',
                 icon: 'success',
                 confirmButtonColor: '#3085d6',
                 confirmButtonText: 'Ok',
@@ -385,8 +385,8 @@ $(document).ready(function () {
     })
     $('#customerBuyButton').click(function () {
         Swal.fire({
-            title: 'Chỉ có khách hàng mới có thể đặt hàng',
-            text: 'Xin vui lòng kiểm tra lại',
+            title: 'Only customers can order',
+            text: 'Please try again',
             icon: 'warning',
             confirmButtonColor: '#3085d6',
             confirmButtonText: 'Ok',

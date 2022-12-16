@@ -12,7 +12,7 @@
             <!-- form tìm kiếm  -->
             <form class="form-inline mx-auto">
                 <div class="input-group input-search">
-                    <input type="text" class="form-control" aria-label="Small" placeholder="Nhập sách cần tìm kiếm...">
+                    <input type="text" class="form-control" aria-label="Small" placeholder="Insert book...">
                     <div class="input-group-append">
                         <button type="button" class="btn" style="background-color: #CF111A; color: white;" id="bookSearchBtn">
                             <i class="fa fa-search"></i>
@@ -31,7 +31,7 @@
                     </li>
                     <div class="info-logout">
                         <a class="font-weight-bold nav-link username text-success" href="/tai-khoan">{{current_user.username}}</a>
-                        <a class="font-weight-bold nav-link logout text-danger" href="/client/api/log-out">Thoát <i
+                        <a class="font-weight-bold nav-link logout text-danger" href="/client/api/log-out">Logout <i
                                 class="fas fa-sign-out-alt"></i></a>
                     </div>
                     {%else%}
@@ -42,9 +42,9 @@
                     </li>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item btn-login text-center my-2" href="#" data-toggle="modal"
-                            data-target="#login-form">Đăng nhập</a>
+                            data-target="#login-form">Log in</a>
                         <a class="dropdown-item btn-register text-center mb-2" href="#" data-toggle="modal"
-                            data-target="#register-form">Đăng ký</a>
+                            data-target="#register-form">Register</a>
                     </div>
                     {% endif %}
                 </div>

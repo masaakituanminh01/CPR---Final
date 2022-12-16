@@ -17,8 +17,8 @@ function addToCart(bookId, isAuthenticated = false) {
   }).then(res => res.json()).then(result => {
     if (result['result'])
       Swal.fire(
-        'Thêm vào giỏ hàng thành công!!!',
-        'Giỏ hàng của bạn đã được cập nhật.',
+        'Add to cart successfully!!!',
+        'Your cart has been updated.',
         'success'
       ).then(function () {
         getCartDetailAmount()
@@ -26,8 +26,8 @@ function addToCart(bookId, isAuthenticated = false) {
       })
     else
       Swal.fire({
-        title: 'Thêm vào giỏ hàng thất bại',
-        text: 'Xin vui lòng kiểm tra lại',
+        title: 'Add to cart failed',
+        text: 'Please try again',
         icon: 'warning',
         confirmButtonColor: '#3085d6',
         confirmButtonText: 'Ok',

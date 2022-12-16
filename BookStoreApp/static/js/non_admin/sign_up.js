@@ -75,8 +75,8 @@ function setConfirmEmail() {
         }).then(res => res.json()).then(data => {
             if (data == 'error') {
                 Swal.fire({
-                    title: 'Hệ thống đang bảo trì',
-                    text: 'Xin vui lòng quay lại sau',
+                    title: 'System is under maintenance',
+                    text: 'Please try again later',
                     icon: 'warning',
                     confirmButtonColor: '#3085d6',
                     confirmButtonText: 'Ok',
@@ -97,8 +97,8 @@ function setCheckNumber(e, event) {
 
     if (event.keyCode == 13) {
         Swal.fire({
-            title: 'Mật mã sai !!!',
-            text: 'Xin vui lòng kiểm tra lại',
+            title: 'Wrong code !!!',
+            text: 'Please try again',
             icon: 'warning',
             confirmButtonColor: '#3085d6',
             confirmButtonText: 'Ok',
@@ -129,8 +129,8 @@ function setSignup() {
     }).then(res => res.json()).then(data => {
         if (data == 'error') {
             Swal.fire({
-                title: 'Thông tin bạn nhập không hợp lệ !!!',
-                text: 'Xin vui lòng thử lại',
+                title: 'Your information is invalid !!!',
+                text: 'Please try again',
                 icon: 'warning',
                 confirmButtonColor: '#3085d6',
                 confirmButtonText: 'Ok',
@@ -147,7 +147,7 @@ function setSignup() {
         }
         else if (data == 'exist') {
             Swal.fire({
-                title: 'Tên đăng nhập đã tồn tại !!!',
+                title: 'Your username is existed !!!',
                 text: '',
                 icon: 'warning',
                 confirmButtonColor: '#3085d6',
@@ -157,8 +157,8 @@ function setSignup() {
         }
         else {
             Swal.fire(
-                'Đăng kí thành công',
-                'Tài khoản của bạn đã được kích hoạt!',
+                'Register successfully',
+                'Your account has been activated!',
                 'success'
             )
             $('#login-form').removeClass("fade")
@@ -190,8 +190,8 @@ function setResetValueInput() {
 // xóa dữ liệu khi đóng modal
 $(".close").click(function () {
     Swal.fire({
-        title: 'Bạn có chắc chắn muốn đóng?',
-        text: 'Dữ liệu sẽ bị xóa nếu bạn nhấn "OK"',
+        title: 'Are you sure you want to close?',
+        text: 'Your information will be deleted',
         showDenyButton: true,
         denyButtonText: `Không`,
     }).then((result) => {

@@ -40,7 +40,7 @@
             <!-- header của khối sản phẩm : tag(tác giả), bộ lọc và sắp xếp  -->
             <div class="header-block-product  d-flex">
                 <div class="tag">
-                    <label>Tác giả nổi bật:</label>
+                    <label>Author:</label>
                     <a href="#">Tất cả</a>
                     {%for book_in_category in books_in_category%}
                     <a href="#" data-author=".{{book_in_category['book_id']}}">{{book_in_category['book_author']}}</a>

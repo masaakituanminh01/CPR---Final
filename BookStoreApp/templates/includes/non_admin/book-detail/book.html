@@ -2,7 +2,7 @@
 <section class="breadcrumbbar">
     <div class="container">
         <ol class="breadcrumb mb-0 p-0 bg-transparent">
-            <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="/">Homepage</a></li>
             <li class="breadcrumb-item active"><a href="#">{{book_detail['book_name']}}</a></li>
         </ol>
     </div>
@@ -46,27 +46,25 @@
                         </div>
                         <div class="col-md-7 mb-4">
                             <div class="price">
-                                <div class="cover-price">Giá bìa:<span
+                                <div class="cover-price">Price:<span
                                         class="old-price ml-2">{{book_detail['book_price']}} ₫</span></div>
-                                <div class="price-detail">Giá tại Dream Bookstore<span
+                                <div class="price-detail">Price at Dream<span
                                         class="new-price font-weight-bold">{{book_detail['book_price_sale']}}
                                     </span><span class="unit">₫</span></div>
-                                <div class="save">Tiết kiệm: <b>{{book_detail['money_saving']}}₫</b> <span
+                                <div class="save">Saved: <b>{{book_detail['money_saving']}}₫</b> <span
                                         class="sale">-{{book_detail['sale_percent']}} %</span>
                                 </div>
                             </div>
                             <div class="preferential my-3">
-                                <h6 class="header font-weight-bold">Khuyến mãi & Ưu đãi tại Dream BookStore:</h6>
+                                <h6 class="header font-weight-bold">Promotions & Offers at Dream BookStore:</h6>
                                 <ul>
-                                    <li><b>Miễn phí giao hàng </b>cho đơn hàng từ 150.000đ ở Hà Nội và 300.000đ ở
-                                        Tỉnh/Thành khác </li>
-                                    <li><b>Combo sách HOT </b></li>
-                                    <li>Tặng Bookmark cho mỗi đơn hàng</li>
-                                    <li>Bao sách miễn phí (theo yêu cầu)</li>
+                                    <li><b>Free shipping </b>for order from 150.000đ in Hanoi và 300.000đ in other province </li>
+                                    <li>Free Bookmark for every order</li>
+                                    <li>Free protector (as requested)</li>
                                 </ul>
                             </div>
                             <div class="amount d-flex">
-                                <label class="font-weight-bold">Số lượng: </label>
+                                <label class="font-weight-bold">Amount: </label>
                                 <div class="input-number input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text btn-spin btn-dec">-</span>
@@ -79,30 +77,30 @@
                                 </div>
                             </div>
                             <div class="buy-btn btn w-100 text-uppercase" onclick="addToCart('{{book_detail['book_id']}}',
-                                isAuthenticated='{{current_user.is_authenticated}}')">Chọn mua</div>
+                                isAuthenticated='{{current_user.is_authenticated}}')">Add to cart</div>
 
                         </div>
                         <!-- thông tin khác của sản phẩm:  tác giả, ngày xuất bản, kích thước ....  -->
                         <div class="col-md-5">
                             <div class="book-info">
                                 <ul>
-                                    <li>Tác giả: <a href="#" class="author">{{book_detail['book_author']}}</a></li>
-                                    <li>Ngày xuất bản: <b>{{book_detail['book_publish_date']}}</b></li>
-                                    <li>Loại sách: <b>{{book_detail['category_name']}}</b></li>
-                                    <li>Dịch giả:
+                                    <li>Author: <a href="#" class="author">{{book_detail['book_author']}}</a></li>
+                                    <li>Publish date: <b>{{book_detail['book_publish_date']}}</b></li>
+                                    <li>Category: <b>{{book_detail['category_name']}}</b></li>
+                                    <li>Translator:
                                         {% if book_detail['book_translator']|length>0 %}
                                         <b>{{book_detail['book_translator']}}</b>
                                         {% else %}
-                                        <b>Không có</b>
+                                        <b>None</b>
                                         {% endif %}
                                     </li>
-                                    <li>Nhà xuất bản: <b>{{book_detail['manufacturer_name']}}</b></li>
-                                    <li>Hình thức bìa: <b>{{book_detail['book_cover_page_type']}}</b></li>
-                                    <li>Số trang: <b>{{book_detail['book_page_number']}}</b></li>
-                                    <li>Cân nặng: <b>{{book_detail['book_weight']}} kg</b></li>
-                                    <li>Điểm tích lũy: <b>{{book_detail['point_amount']}}</b></li>
-                                    <li>Số lượt đánh giá: <b>{{book_detail['book_like_amount']}}</b></li>
-                                    <li>Free ship: <b>{{book_detail['book_is_free_ship']}}</b></li>
+                                    <li>Manufacturer: <b>{{book_detail['manufacturer_name']}}</b></li>
+                                    <li>Book cover type: <b>{{book_detail['book_cover_page_type']}}</b></li>
+                                    <li>Number of pages: <b>{{book_detail['book_page_number']}}</b></li>
+                                    <li>Weight: <b>{{book_detail['book_weight']}} kg</b></li>
+                                    <li>Point: <b>{{book_detail['point_amount']}}</b></li>
+                                    <li>Review rate: <b>{{book_detail['book_like_amount']}}</b></li>
+                                    <li>Free shipping: <b>{{book_detail['book_is_free_ship']}}</b></li>
                                 </ul>
                             </div>
                         </div>
@@ -111,7 +109,7 @@
                 <hr>
                 <div class="col-md-12" style="border-top:1px solid rgba(0,0,0,.1) ;">
                     <div class="recommend-book py-3">
-                        <h1 class="header text-uppercase" style="font-weight: 400;">Mua kèm giảm thêm</h1>
+                        <h1 class="header text-uppercase" style="font-weight: 400;">Buy more for more discount</h1>
                     </div>
                     <div class="row block-product">
                         {% for attachment in book_attachments%}
@@ -148,12 +146,10 @@
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                 <a class="nav-item nav-link active text-uppercase nav-book-detail" id="intro-navtab"
                                     data-toggle="tab" href="#intro-nav" role="tab" aria-controls="intro-nav"
-                                    aria-selected="true">Giới
-                                    thiệu</a>
+                                    aria-selected="true">Information</a>
                                 <a class="nav-item nav-link text-uppercase nav-book-detail" id="vote-navtab"
                                     data-toggle="tab" href="#vote-nav" role="tab" aria-controls="vote-nav"
-                                    aria-selected="false">Đánh
-                                    giá của độc giả</a>
+                                    aria-selected="false">User review</a>
                             </div>
                         </nav>
                         <!-- nội dung của từng tab  -->
@@ -162,7 +158,7 @@
                                 aria-labelledby="intro-navtab">
                                 <h6 class="title font-weight-bold">{{book_detail['book_name']}}</h6>
                                 {% if book_detail['book_description'] == ''%}
-                                <p>Thông tin đang được cập nhật</p>
+                                <p>Information updating...</p>
                                 {%else%}
                                 {{book_detail['book_description']}}
                                 {% endif %}
@@ -170,7 +166,7 @@
                             <div class="tab-pane fade" id="vote-nav" role="tabpanel" aria-labelledby="vote-navtab">
                                 <div class="row">
                                     <div class="col-md-3 text-center">
-                                        <p class="title">Đánh giá trung bình</p>
+                                        <p class="title">Average score</p>
                                         <div class="point">0/5</div>
                                         <div class="star">
                                             <i class="fa fa-star"></i>
@@ -179,7 +175,7 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star"></i>
                                         </div>
-                                        <p class="amount-comment text-muted">(0 nhận xét)</p>
+                                        <p class="amount-comment text-muted">(0 review)</p>
                                     </div>
                                     <div class="col-md-5">
                                         <div class="vote-title text-center">
@@ -218,12 +214,12 @@
                                                         aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div> 0%
                                             </div>
-                                            <div class="btn vote-form mt-3">Viết đánh giá của bạn</div>
+                                            <div class="btn vote-form mt-3">Write your review</div>
                                         </div>
                                         <!-- nội dung của form đánh giá  -->
                                         <div class="vote-form">
-                                            <h6 class="title text-uppercase">GỬI ĐÁNH GIÁ CỦA BẠN</h6>
-                                            <span class="danhgiacuaban">Đánh giá của bạn về sản phẩm này:</span>
+                                            <h6 class="title text-uppercase">Your review</h6>
+                                            <span class="danhgiacuaban">Your review about this product:</span>
                                             <div
                                                 class="rating d-flex flex-row-reverse align-items-center justify-content-end">
                                                 <input type="radio" name="star" id="star1"><label for="star1"></label>
@@ -234,17 +230,17 @@
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="txtFullname w-100"
-                                                    placeholder="Mời bạn nhập tên(Bắt buộc)">
+                                                    placeholder="Input your name">
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="txtEmail w-100"
-                                                    placeholder="Mời bạn nhập email(Bắt buộc)">
+                                                    placeholder="Input your email">
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="txtComment w-100"
-                                                    placeholder="Đánh giá của bạn về sản phẩm này">
+                                                    placeholder="Your review about this product">
                                             </div>
-                                            <div class="btn submit-comment">Gửi bình luận</div>
+                                            <div class="btn submit-comment">Send review</div>
                                         </div>
                                     </div>
                                 </div>
@@ -269,8 +265,8 @@
             <div class="row">
                 <!--header-->
                 <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
-                    <h1 class="header text-uppercase" style="font-weight: 400;">SẢN PHẨM TƯƠNG TỰ</h1>
-                    <a href="/bao-tri" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                    <h1 class="header text-uppercase" style="font-weight: 400;">SIMILAR PRODUCT</h1>
+                    <a href="/bao-tri" class="btn btn-warning btn-sm text-white">View all</a>
                 </div>
             </div>
             <div class="block-product" style="padding-bottom: 2rem;">
@@ -289,7 +285,7 @@
                                 <div class="old-price text-muted">{{book['book_price']}} ₫</div>
                                 <div class="sale">-{{book['sale_percent']}}%</div>
                             </div>
-                            <small class="author text-muted">Tiết kiệm: {{book['money_saving']}} đ</small>
+                            <small class="author text-muted">Saved: {{book['money_saving']}} đ</small>
                         </div>
                         <div class="review">
                             <ul class="d-flex" style="list-style: none;">
@@ -298,7 +294,7 @@
                                 <li class="active"><i class="fa fa-star"></i></li>
                                 <li class="active"><i class="fa fa-star"></i></li>
                                 <li><i class="fa fa-star"></i></li>
-                                <li><span class="text-muted">0 nhận xét</span></li>
+                                <li><span class="text-muted">0 review</span></li>
                             </ul>
                         </div>
                     </a>
@@ -315,8 +311,8 @@
         <div class="row">
             <!--header -->
             <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light">
-                <h2 class="header text-uppercase" style="font-weight: 400;">SẢN PHẨM BẠN ĐÃ XEM</h2>
-                <a href="/bao-tri" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                <h2 class="header text-uppercase" style="font-weight: 400;">Product you have seen</h2>
+                <a href="/bao-tri" class="btn btn-warning btn-sm text-white">View all</a>
             </div>
         </div>
         <div class="p-2 bg-white">
@@ -357,11 +353,11 @@
                 <div class="cart-empty-content w-100 text-center justify-content-center">
                     <img src="../static/images/shopping-cart-not-product.png" alt="shopping-cart-not-product"
                         style="margin: auto;">
-                    <p>Không có sách đã xem qua</p>
+                    <p>No book has been seen</p>
                 </div>
                 {%endif %}
                 {% else%}
-                <p>Bạn phải đăng nhập để xem tính năng này</p>
+                <p>You have to login to see this feature</p>
                 {% endif %}
             </div>
         </div>
